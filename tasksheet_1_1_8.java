@@ -9,11 +9,18 @@ public class tasksheet_1_1_8 {
     // Integer variable arguments method to calculate cumulative sums
     public static void calculateCumulativeSums(int... numbers) {
         int sum = 0;
-        
-        for (int val : numbers) {
-            sum += val;
-            System.out.println(sum + " ");
+
+        System.out.print("(");
+
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+            System.out.print(numbers[i]);
+
+            if (i < numbers.length - 1) {
+                System.out.print(",");
+            }
         }
-        System.out.println();
+
+        System.out.println(") = " + sum);
     }
 }
